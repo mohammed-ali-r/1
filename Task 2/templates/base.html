@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<style>    
+   
+</style>
+<body>
+        <div class="navbar">
+            <li>
+                <a class="Logo" href="/"><img class="Navbar-Logo" src="static\Assets\Assets\Wild World.png" alt="Navbar Logo"></a>
+                <a id="nbcontent"href="ouranimals">Our Animals</a>
+                <a id="nbcontent"href="Testimonials">Testimonials</a>
+                <a id="nbcontent" href="ot">Opening Times</a>
+                <!-- Simple navbar with all webpages on including logo which is clickable and takes you to home page -->
+                <a id="nbcontent" href="contactus">Contact Us</a>
+                <a id="nbcontent" href="bookings">Bookings</a>
+            </li>
+    </div>
+{% block content %}
+{% endblock %}
+</body>
+</html>

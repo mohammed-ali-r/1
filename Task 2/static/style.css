@@ -1,0 +1,123 @@
+@font-face {
+    font-family: DK Brush;
+    src: url(DK\ Cinnabar\ Brush.ttf);
+}
+
+body{
+    margin:0px;
+    background-color: #865ee6;
+    background-image: url(stencils.png);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.navbar
+{
+    background-color: #a3d45f;
+    text-align: center;
+    text-decoration: none;
+    border: 4px solid#ed5e64;
+    border-radius: 25px;
+    height: 100px;
+    display: flex;
+    width: auto;
+    box-shadow: 3px 2px 2px black;
+    display: inline-block;
+    margin: 0 auto;
+    justify-content: center;
+    
+
+}
+
+.navbar li{
+    display: inline-block;
+    text-decoration: none;
+    list-style: none;
+    text-align: center !important; 
+    padding-top: 10px!important;
+    margin:auto;
+    height:auto;
+    width: auto;
+    display: inline-block;
+    margin: 0 auto;
+    justify-content: center;
+    margin-top: 5px;
+    font: DK Brush;
+    font-family: DK Brush;
+    
+}
+
+#nbcontent {
+    text-decoration: none;
+    color: #ed5e64;
+    background-color: #865ee6;
+    font-size: 30px;
+    border: 2px solid black;
+    border-radius: 40px;
+    text-align: center;
+    padding: 12px 15px;
+    transition: ease-in-out 0.3s;
+    overflow: hidden;
+    height: auto;
+    width: auto;
+    box-shadow: 1px 1px 1px black;
+    display: inline-block;
+    margin: 0 auto;
+    justify-content: center;
+    font-family: DK Brush;
+}
+
+#nbcontent:hover {
+    background-color: #5C8374;
+    color: black;
+}
+
+.navbar{
+    min-height: fit-content;
+}
+
+.navbar a:active{
+    background-color: white;
+}
+
+.Navbar-Logo{
+    height: auto;
+    width: 20%;
+    float: left;
+    padding-left: 10px;
+    
+}
+
+.homeimg{
+    width: 600px;
+    height: auto;
+    border-radius: 40px;
+
+}
+
+.meetthezoo{
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 5px;
+    border: 2px solid black;
+    background-color: #ed5e64;
+    border-radius: 40px;
+    justify-content: center;
+    gap: 1em;
+    padding: 5px;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 10px;
+    box-shadow: 3px 2px 2px black;
+}
+
+.meetthezoo p{
+    font-size: larger;
+    
+}
+    
+.meetthezoo h3{
+    font-size: 80px;
+    
+}
+    

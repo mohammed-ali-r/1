@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wild World Zoo - Testimonials</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Testimonials</h1>
+    </header>
+    <style>
+        /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+h1 {
+    margin: 0;
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Testimonial Styles */
+.testimonial {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+blockquote {
+    font-style: italic;
+    margin: 0;
+}
+
+p {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+    </style>
+    <main>
+        <div class="testimonial">
+            <blockquote>
+                "I had an amazing time at Wild World Zoo! The variety of animals and the knowledgeable staff made it an unforgettable experience."
+            </blockquote>
+            <p>- John Doe</p>
+        </div>
+        <div class="testimonial">
+            <blockquote>
+                "A wonderful place for families! My kids enjoyed every moment, and we can't wait to visit again."
+            </blockquote>
+            <p>- Jane Smith</p>
+        </div>
+        <div class="testimonial">
+            <blockquote>
+                "Wild World Zoo is a gem! The conservation efforts and educational programs are commendable. Highly recommended."
+            </blockquote>
+            <p>- David Johnson</p>
+        </div>
+        <div class="testimonial">
+            <blockquote>
+                "The safari experience was fantastic! Seeing the animals up close in their natural habitat was truly breathtaking."
+            </blockquote>
+            <p>- Emily Brown</p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Wild World Zoo. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+{%endblock%}

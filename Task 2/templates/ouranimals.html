@@ -1,0 +1,126 @@
+{% extends "base.html" %}
+{% block content %}
+<head><!-- inherit navbar  -->
+<style>
+#container
+{
+    width: 1200px;
+    height:px;
+    border: 4px solid black;
+    background-color: #a3d45f;
+    margin-left: auto;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 5%;
+    margin:5% auto; 
+    
+}
+
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+img
+{
+    width: auto;
+    max-width: 1000px;
+    height: 600px;
+    padding: 10px;
+    border-radius: 30px;
+}
+
+button{
+    width: 100px;
+    height:60px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+@keyframes fadein {
+    from {opacity: 0; }
+    to {opacity: 1; }
+}
+
+.play
+{
+    animation: fadein 0.4s ease-in;
+}
+
+</style>
+</head>
+<!-- style for the whole web page and animations and photo gallery  -->
+<body>
+    <div id="container">
+        <h1>Our Animals</h1>
+        <div id ="image">
+            <img id="img" src="static\images\1.jpg" alt="Images of animals">
+            <div id="caption">Step into the realm of Wild World Zoo and encounter Humphrey, our magnificent hippopotamus. Humphrey has been a cherished inhabitant of our zoo for over a decade, delighting visitors with his playful antics and endearing charm. Known for his laid-back demeanor and love for lounging in the sun, Humphrey has become an iconic figure at Wild World. With his massive yet gentle presence, Humphrey embodies the spirit of the African savannah, captivating hearts and leaving lasting memories for all who visit our zoo.</div><!-- Makes the first image the hippo with the caption to load the web page onto  -->
+        </div>
+
+
+        <div id="controls">
+            <button onclick ="GoBack()">Back</button>
+            <button onclick="GoNext()">Next</button>
+        </div> <!-- puts the buttons onto the page  --> 
+    </div>
+
+    <script>
+        var num = 1;
+        var element = document.getElementById("img");
+        var captionElement = document.getElementById("caption");
+        // JS script; variables called num starts 1, keeps track of current caption and photo number  
+
+        var captions = {
+    1: "Step into the realm of Wild World Zoo and encounter Humphrey, our magnificent hippopotamus. Humphrey has been a cherished inhabitant of our zoo for over a decade, delighting visitors with his playful antics and endearing charm. Known for his laid-back demeanor and love for lounging in the sun, Humphrey has become an iconic figure at Wild World. With his massive yet gentle presence, Humphrey embodies the spirit of the African savannah, captivating hearts and leaving lasting memories for all who visit our zoo.",
+    2: "Meet Camille, our captivating chameleon resident. Camille has been a fascinating addition to our zoo for the past three years, showcasing her remarkable color-changing abilities and graceful movements. With her inquisitive nature and ability to blend seamlessly into her surroundings, Camille never fails to intrigue and mesmerize visitors of all ages. As one of the most unique creatures in our collection, Camille brings a sense of wonder and curiosity to the Wild World experience, leaving guests enchanted by her mysterious charm.",
+    3: "The bond between mother and daughter shines brightly with Ellie and her adorable calf, Bella. Ellie, the matriarch of our elephant family, has been a beloved member of our zoo for over two decades, captivating audiences with her wisdom and gentle nature. Bella, her playful and spirited daughter, brings joy and laughter to all who encounter her. Together, they epitomize the strength of family bonds and the beauty of maternal love, enchanting visitors with their heartwarming interactions and majestic presence. Join us at Wild World as we celebrate the enduring bond between Ellie and Bella, a testament to the enduring power of family in the animal kingdom.",
+    4: " Meet Daisy, our beloved deer resident who captivates visitors with her graceful demeanor and gentle nature. Daisy has been enchanting guests at Wild World for over five years, becoming a cherished member of our zoo family. With her curious personality and elegant presence, Daisy continues to be a highlight of the Wild World experience, inspiring awe and admiration among all who encounter her.",
+    5: "The dynamic trio of meerkats, Mika, Max, and Mia, steal the show with their spirited antics and close-knit bond. Born and raised in our zoo, these siblings have been captivating visitors with their playful adventures and adorable sibling rivalry for the past four years. Mika, the daring leader, leads the pack with confidence, while Max and Mia, the mischievous twins, keep the fun and excitement alive with their boundless energy. Together, they epitomize the spirit of family and unity, showcasing the beauty of sibling relationships in the animal kingdom. Join us at Wild World Zoo and witness the heartwarming camaraderie of Mika, Max, and Mia as they continue to charm guests with their playful personalities and inseparable bond.",
+    6: "Grace has been a cherished member of our zoo for over a decade, captivating visitors with her elegant stride and gentle demeanor. Towering above the savannah landscape, Grace embodies the beauty and wonder of the African plains, inspiring awe and admiration among all who behold her. With her serene presence and tranquil nature, Grace continues to be a symbol of resilience and grace, enchanting guests with her timeless elegance and enduring spirit at Wild World Zoo.",
+    7: " Luna, a regal presence in our zoo for the past eight years, enchants visitors with her gentle disposition and serene gaze. With each elegant stride, Luna embodies the tranquility and beauty of the African savannah, captivating the hearts of guests young and old. As a beloved ambassador of Wild World, Luna symbolizes the harmony and magnificence of nature, inspiring wonder and appreciation for the world's tallest land mammal. Join us as we embark on an unforgettable journey alongside Luna, where every moment is a testament to the awe-inspiring wonders of the animal kingdom.",
+    8: "The fierce and majestic Tiger, named Rajah, prowls through the lush foliage of his domain. Rajah, a magnificent presence in our zoo for the past six years, commands attention with his piercing gaze and powerful stature. With each graceful movement, Rajah embodies the untamed spirit of the jungle, captivating visitors with his raw beauty and primal allure. As the undisputed king of the wild, Rajah instills a sense of awe and respect, reminding us of the importance of preserving our planet's most iconic predators. Join us on an exhilarating journey alongside Rajah, where every encounter is a thrilling glimpse into the untamed wonders of the natural world."  
+}; 
+// captions generated by chat gpt for each animal 
+        function GoBack()
+
+        {
+            if (num > 1)
+            {
+                num --;
+            }
+
+            else
+            {
+                num = 8
+            }
+            PlayAnimation(); //If the variable number for the caption and img number is greater then one, it decreases the num by 1 unless the number is  1 or less then resets the num to 8 to create a loop on the  img's and captions
+        }
+
+        function GoNext()
+        {
+            if (num<8)
+            {
+                num++;
+            }
+            else
+            {
+                num=1;
+            }
+            PlayAnimation(); //does the same thing but loops it from 8 back to 1
+        }
+        function PlayAnimation()
+        {
+            element.src="static/images/"+num+".jpg"; //changes the source by 1 in the folder corresponding to the current number
+            captionElement.textContent = captions[num]; // updates the text of captionelement to display the correct caption
+            element.classList.remove("play"); // gets rid of the .play animation to play it again
+            void element.offsetWidth;
+            element.classList.add("play"); //plays the animation again
+        }
+    </script>
+
+
+</body>
+
+{%endblock%}

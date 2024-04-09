@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wild World Zoo - Opening Times</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+h1 {
+    margin: 0;
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+section {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+p {
+    margin-top: 10px;
+}
+
+</style>
+<body>
+    <header>
+        <h1>Opening Times</h1>
+    </header>
+    <main>
+        <section>
+            <h2>February - November</h2>
+            <p>Open Monday - Sunday: 10:30am - 5:00pm</p>
+            <p>Open on Bank Holidays</p>
+        </section>
+        <section>
+            <h2>December - January</h2>
+            <p>Open Monday - Sunday: 10:30am - 4:00pm</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Wild World Zoo. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{%endblock%}

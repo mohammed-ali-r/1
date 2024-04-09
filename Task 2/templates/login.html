@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<style>/* CSS for Login Page */
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+    }
+    
+    h3 {
+        text-align: center;
+        margin-top: 20px;
+    }
+    
+    .container {
+        max-width: 400px;
+        margin: 50px auto;
+        background: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    }
+    
+    form {
+        margin-top: 20px;
+    }
+    
+    input[type="email"],
+    input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        box-sizing: border-box;
+    }
+    
+    .checkbox {
+        margin-bottom: 10px;
+        display: block;
+    }
+    
+    .button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+        width: 100%;
+    }
+    
+    .button:hover {
+        background-color: #45a049;
+    }
+    
+    .flashes {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .flashes li {
+        background: #f4f4f4;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 3px;
+        border: 1px solid #ccc;
+    }
+
+    .register-button {
+    background-color: #f44336; /* Red color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.register-button:hover {
+    background-color: #d32f2f; /* Darker red on hover */}
+    
+    </style>
+<body>
+    <h3>Login</h3>
+    <br>
+    <div>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul class="flashes">
+            {% for message in messages%}
+                {{ message }}
+            {% endfor %}
+            </ul>
+        {% endif %}
+        {% endwith %}
+    </div>
+    <div>
+        <form method = "POST" action = "#">
+            <input type = "email" name = "email"
+            placeholder="Your Email" autofocus="">
+            <input type ="password" name = "password"
+            placeholder = "Your Password">
+
+            <label class ="checkbox">
+                <input type = "checkbox" name ="rememberMe">
+                Remember me
+            </label>
+            <button class = "button" value="submit" type="submit">Login</button>
+            <div>
+                <form method="POST" action="#">
+                    
+                    <div>
+                        <a href="{{ url_for('register') }}"><button class="register-button">Register</button></a>
+                    </div>
+                </form>
+                
+            </div>
+        </form>
+    </div>
+</body>
+</html>
